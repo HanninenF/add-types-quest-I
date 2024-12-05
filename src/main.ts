@@ -4,6 +4,7 @@ import {
   averageNumberOfHobbies,
   getPersonWithMostHobbies,
   getOldestPerson,
+  getYoungestPerson,
 } from "./func/user-functions";
 import {
   averageMonsterAge,
@@ -28,17 +29,7 @@ console.log(
 // skriv ut "Den personen med flest hobbies har Y stycken hobbies". Byt ut Y mot ett funktionsanrop. Skapa den funktionen.*FÄRDIG
 
 console.log(getPersonWithMostHobbies(people));
-// skriv ut "Den äldsta personen är A och den yngsta är B". Byt ut A och B mot funktionsanrop. Skapa de två funktionerna
-
-const getYoungestPerson = (people: User) => {
-  let youngestPerson: User[0] = { name: "", hobby: [], age: Infinity };
-  people.forEach((person) => {
-    if (person.age < youngestPerson.age) {
-      youngestPerson = person;
-    }
-  });
-  return `Den yngsta personen är:\n${youngestPerson.name}, ${youngestPerson.age} år\nsom gillar ${youngestPerson.hobby.join(", ")}`;
-};
+// skriv ut "Den äldsta personen är A och den yngsta är B". Byt ut A och B mot funktionsanrop. Skapa de två funktionerna*FÄRDIG
 
 console.log(getOldestPerson(people));
 console.log(getYoungestPerson(people));

@@ -18,7 +18,7 @@ export const people: User = [
   {
     name: "Olle",
     hobby: ["sportklättring", "vandra", "sticka", "virka"],
-    age: 38,
+    age: 8,
   },
   {
     name: "Leo",

@@ -36,3 +36,13 @@ export const getOldestPerson = (people: User) => {
 
   return `Den äldsta personen är:\n${oldestPerson.name}, ${oldestPerson.age} år\nsom gillar ${oldestPerson.hobby.join(", ")}`;
 };
+
+export const getYoungestPerson = (people: User) => {
+  let youngestPerson: User[0] = { name: "", hobby: [], age: Infinity };
+  people.forEach((person) => {
+    if (person.age < youngestPerson.age) {
+      youngestPerson = person;
+    }
+  });
+  return `Den yngsta personen är:\n${youngestPerson.name}, ${youngestPerson.age} år\nsom gillar ${youngestPerson.hobby.join(", ")}`;
+};
