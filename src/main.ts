@@ -8,16 +8,14 @@ import {
   prettyPrintMonster,
 } from "./func/monster";
 import { commonColor, numberOfColors } from "./func/dog";
-
-// Fixa så funktionen gör det den ska
-const printSum = (a: number, b: number) => {
-  console.log(a + b);
-};
+import { printSum } from "./printSum";
+import User from "./func/user";
+import Person from "./func/Person";
 
 printSum(1, 2);
 printSum(5, 12);
 
-const arr = [
+const people = [
   {
     name: "Stina",
     hobby: ["läsa böcker"],
@@ -45,12 +43,22 @@ const arr = [
   },
 ];
 
-console.log(`Vi har ${arr.length} stycken användare.`);
-console.log(`Medelåldern på alla användare är ${averageAge(arr)}`);
+console.log(`Vi har ${people.length} stycken användare.`);
+console.log(`Medelåldern på alla användare är ${averageAge(people)}`);
 console.log(
-  `Medelantalet hobbies per användare är ${averageNumberOfHobbies(arr)}`
+  `Medelantalet hobbies per användare är ${averageNumberOfHobbies(people)}`
 );
 // skriv ut "Den personen med flest hobbies har Y stycken hobbies". Byt ut Y mot ett funktionsanrop. Skapa den funktionen.
+const getPersonWithMostHobbies = (people: User) => {
+  let maxPerson: Person | null = null;
+  people.forEach((person) => {
+    if (!maxPerson || person.hobby.length > maxPerson.hobby.length) {
+      maxPerson = person;
+    }
+  });
+  return maxPerson;
+};
+console.log(getPersonWithMostHobbies(people));
 // skriv ut "Den äldsta personen är A och den yngsta är B". Byt ut A och B mot funktionsanrop. Ska de två funktionerna
 
 const dogs = [
