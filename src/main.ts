@@ -1,5 +1,9 @@
 import "./styles.css";
-import { averageAge, averageNumberOfHobbies } from "./func/user-functions";
+import {
+  averageAge,
+  averageNumberOfHobbies,
+  getPersonWithMostHobbies,
+} from "./func/user-functions";
 import {
   averageMonsterAge,
   averageNumberOfTentacles,
@@ -15,7 +19,7 @@ import Person from "./func/Person";
 printSum(1, 2);
 printSum(5, 12);
 
-const people = [
+const people: User = [
   {
     name: "Stina",
     hobby: ["läsa böcker"],
@@ -41,6 +45,17 @@ const people = [
     hobby: ["matlagning", "bakning"],
     age: 17,
   },
+  {
+    name: "Janne",
+    hobby: [
+      "ostlagning",
+      "racerbakning",
+      "jannefiskning",
+      "mumsfillibabbakörning",
+      "indianhopp",
+    ],
+    age: 54,
+  },
 ];
 
 console.log(`Vi har ${people.length} stycken användare.`);
@@ -48,16 +63,8 @@ console.log(`Medelåldern på alla användare är ${averageAge(people)}`);
 console.log(
   `Medelantalet hobbies per användare är ${averageNumberOfHobbies(people)}`
 );
-// skriv ut "Den personen med flest hobbies har Y stycken hobbies". Byt ut Y mot ett funktionsanrop. Skapa den funktionen.
-const getPersonWithMostHobbies = (people: User) => {
-  let maxPerson: Person | null = null;
-  people.forEach((person) => {
-    if (!maxPerson || person.hobby.length > maxPerson.hobby.length) {
-      maxPerson = person;
-    }
-  });
-  return maxPerson;
-};
+// skriv ut "Den personen med flest hobbies har Y stycken hobbies". Byt ut Y mot ett funktionsanrop. Skapa den funktionen.*FÄRDIG
+
 console.log(getPersonWithMostHobbies(people));
 // skriv ut "Den äldsta personen är A och den yngsta är B". Byt ut A och B mot funktionsanrop. Ska de två funktionerna
 
