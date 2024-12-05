@@ -2,17 +2,17 @@ import User from "./user";
 export const people: User = [
   {
     name: "Stina",
-    hobby: ["läsa böcker"],
+    hobby: ["böcker"],
     age: 67,
   },
   {
     name: "Lisa",
-    hobby: ["åka skidor"],
+    hobby: ["skidåkning"],
     age: 26,
   },
   {
     name: "Mio",
-    hobby: ["spela rollspel", "spela brädspel"],
+    hobby: ["rollspel", "brädspel"],
     age: 229,
   },
   {

@@ -34,5 +34,5 @@ export const getOldestPerson = (people: User) => {
     }
   });
 
-  return `Den äldsta personen är:\n${oldestPerson.name}, ${oldestPerson.age} år\nsom gillar att ${oldestPerson.hobby.join(", ")}`;
+  return `Den äldsta personen är:\n${oldestPerson.name}, ${oldestPerson.age} år\nsom gillar ${oldestPerson.hobby.join(", ")}`;
 };

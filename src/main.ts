@@ -30,8 +30,18 @@ console.log(
 console.log(getPersonWithMostHobbies(people));
 // skriv ut "Den äldsta personen är A och den yngsta är B". Byt ut A och B mot funktionsanrop. Skapa de två funktionerna
 
+const getYoungestPerson = (people: User) => {
+  let youngestPerson: User[0] = { name: "", hobby: [], age: Infinity };
+  people.forEach((person) => {
+    if (person.age < youngestPerson.age) {
+      youngestPerson = person;
+    }
+  });
+  return `Den yngsta personen är:\n${youngestPerson.name}, ${youngestPerson.age} år\nsom gillar ${youngestPerson.hobby.join(", ")}`;
+};
+
 console.log(getOldestPerson(people));
-/* getYoungestPerson(people); */
+console.log(getYoungestPerson(people));
 
 const dogs = [
   { name: "Nisse", color: "brown" },
