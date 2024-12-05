@@ -1,5 +1,4 @@
 import User from "./user";
-import Person from "./Person";
 
 export const averageAge = (allUsers: User) => {
   let allAges = 0;
@@ -18,11 +17,22 @@ export const averageNumberOfHobbies = (allUsers: User) => {
 };
 
 export const getPersonWithMostHobbies = (people: User) => {
-  let maxPerson: Person = { name: "", hobby: [], age: 0 };
+  let maxPerson: User[0] = { name: "", hobby: [], age: 0 };
   people.forEach((person) => {
     if (person.hobby.length > maxPerson.hobby.length) {
       maxPerson = person;
     }
   });
   return `Person med flest hobbys är:\n${maxPerson.name}, ${maxPerson.age} år\nsom gillar ${maxPerson.hobby.join(", ")}`;
+};
+
+export const getOldestPerson = (people: User) => {
+  let oldestPerson: User[0] = { name: "", hobby: [], age: 0 };
+  people.forEach((person) => {
+    if (person.age > oldestPerson.age) {
+      oldestPerson = person;
+    }
+  });
+
+  return `Den äldsta personen är:\n${oldestPerson.name}, ${oldestPerson.age} år\nsom gillar att ${oldestPerson.hobby.join(", ")}`;
 };

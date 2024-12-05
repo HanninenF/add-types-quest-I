@@ -3,6 +3,7 @@ import {
   averageAge,
   averageNumberOfHobbies,
   getPersonWithMostHobbies,
+  getOldestPerson,
 } from "./func/user-functions";
 import {
   averageMonsterAge,
@@ -14,49 +15,10 @@ import {
 import { commonColor, numberOfColors } from "./func/dog";
 import { printSum } from "./printSum";
 import User from "./func/user";
-import Person from "./func/Person";
+import { people } from "./func/persons";
 
 printSum(1, 2);
 printSum(5, 12);
-
-const people: User = [
-  {
-    name: "Stina",
-    hobby: ["läsa böcker"],
-    age: 67,
-  },
-  {
-    name: "Lisa",
-    hobby: ["åka skidor"],
-    age: 26,
-  },
-  {
-    name: "Mio",
-    hobby: ["spela rollspel", "spela brädspel"],
-    age: 22,
-  },
-  {
-    name: "Olle",
-    hobby: ["sportklättring", "vandra", "sticka", "virka"],
-    age: 38,
-  },
-  {
-    name: "Leo",
-    hobby: ["matlagning", "bakning"],
-    age: 17,
-  },
-  {
-    name: "Janne",
-    hobby: [
-      "ostlagning",
-      "racerbakning",
-      "jannefiskning",
-      "mumsfillibabbakörning",
-      "indianhopp",
-    ],
-    age: 54,
-  },
-];
 
 console.log(`Vi har ${people.length} stycken användare.`);
 console.log(`Medelåldern på alla användare är ${averageAge(people)}`);
@@ -66,7 +28,10 @@ console.log(
 // skriv ut "Den personen med flest hobbies har Y stycken hobbies". Byt ut Y mot ett funktionsanrop. Skapa den funktionen.*FÄRDIG
 
 console.log(getPersonWithMostHobbies(people));
-// skriv ut "Den äldsta personen är A och den yngsta är B". Byt ut A och B mot funktionsanrop. Ska de två funktionerna
+// skriv ut "Den äldsta personen är A och den yngsta är B". Byt ut A och B mot funktionsanrop. Skapa de två funktionerna
+
+console.log(getOldestPerson(people));
+/* getYoungestPerson(people); */
 
 const dogs = [
   { name: "Nisse", color: "brown" },
