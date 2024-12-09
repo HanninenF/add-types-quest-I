@@ -13,10 +13,14 @@ import {
   numberOfMonstersWithWings,
   prettyPrintMonster,
 } from "./func/monster";
-import { commonColor, numberOfColors } from "./func/dog";
+import {
+  commonColor,
+  numberOfColors,
+  printAllColors,
+} from "./func/dog-functions";
 import { printSum } from "./printSum";
 import User from "./func/user";
-import Dog from "./func/dog";
+import Dog from "./func/Dog";
 import { people } from "./func/persons";
 
 printSum(1, 2);
@@ -52,9 +56,9 @@ console.log(`Hundarna har ${numberOfColors(dogs)} antal unika färger.`);
 console.log(
   `Den vanligaste färgen bland alla hundar är: ${commonColor(dogs)}.`
 );
-// vi vill ha en pretty print som skriver ut alla färger som hundarna har och hur många hundar det finns av varje färg
+// vi vill ha en pretty print som skriver ut alla färger som hundarna har och hur många hundar det finns av varje färg*FÄRDIG
 
-console.log(numberOfColors(dogs));
+console.log(printAllColors(dogs));
 
 const monsters = [
   { name: "Florg", age: 1266, tentacles: 29, eyes: 666, hasWings: true },
