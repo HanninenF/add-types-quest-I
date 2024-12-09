@@ -1,4 +1,5 @@
-import Dog from "./Dog";
+import { AllowedColors } from "../types/AllowedColors";
+import Dog from "../types/dog";
 
 export const numberOfColors = (dogs: Dog): number => {
   console.log(`numberOfColorsStarted`);
@@ -36,7 +37,6 @@ export const commonColor = (dogs: Dog): string => {
   return mostFrequent;
 };
 
-export type AllowedColors = "white" | "brown" | "black" | "beige" | "gray";
 export const printAllColors = (dogs: Dog) => {
   //gå igenom alla hundar och spara unika färger som ett nytt objekt
   const dogsByColor: { [key in AllowedColors]: string[] } = {

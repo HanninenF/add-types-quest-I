@@ -1,4 +1,4 @@
-import { AllowedColors } from "./dog-functions";
+import { AllowedColors } from "./AllowedColors";
 
 export type Dog = {
   name: string;

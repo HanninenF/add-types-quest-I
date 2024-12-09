@@ -19,9 +19,9 @@ import {
   printAllColors,
 } from "./func/dog-functions";
 import { printSum } from "./printSum";
-import User from "./func/user";
-import Dog from "./func/Dog";
-import { people } from "./func/persons";
+import User from "./types/user";
+import Dog from "./types/dog";
+import { people } from "./data/persons";
 
 printSum(1, 2);
 printSum(5, 12);
