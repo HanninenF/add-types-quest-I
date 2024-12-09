@@ -19,9 +19,8 @@ import {
   printAllColors,
 } from "./func/dog-functions";
 import { printSum } from "./printSum";
-import User from "./types/user";
-import Dog from "./types/dog";
 import { people } from "./data/persons";
+import { dogs } from "./data/dogs";
 
 printSum(1, 2);
 printSum(5, 12);
@@ -38,18 +37,6 @@ console.log(getPersonWithMostHobbies(people));
 
 console.log(getOldestPerson(people));
 console.log(getYoungestPerson(people));
-
-const dogs: Dog = [
-  { name: "Nisse", color: "brown" },
-  { name: "Fiffi", color: "white" },
-  { name: "Fluffe", color: "black" },
-  { name: "Hoppe", color: "beige" },
-  { name: "Pluto", color: "gray" },
-  { name: "Winter", color: "gray" },
-  { name: "Rolf", color: "brown" },
-  { name: "Benny", color: "brown" },
-  { name: "Krister", color: "brown" },
-];
 
 console.log(`Vi har ${dogs.length} stycken hundar.`);
 console.log(`Hundarna har ${numberOfColors(dogs)} antal unika färger.`);
